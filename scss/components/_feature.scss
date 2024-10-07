@@ -1,0 +1,53 @@
+@use '../utils/' as *;
+
+.feature {
+    display: grid;
+    gap: 24px;
+    
+    @media screen and (width >= 69.375em) {
+        // parent grid   
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+
+        // child grid
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__image {        
+        @media screen and (width >= 69.375em) {
+            grid-column: span 2;
+        }
+    }
+
+    &__headline {
+        color: $dark-blue;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        gap: 24px;
+
+        p  {
+            color: $gray-blue;
+        }
+
+        a {
+            display: inline-block;
+            background-color: $soft-red;
+            color: $dark-blue;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 10px 32px;
+            letter-spacing: 0.25em;
+
+            &:hover {
+                transition-duration: 0.4s;
+                background-color: $dark-blue;
+                color: $off-white;
+            }
+        }
+    }
+}

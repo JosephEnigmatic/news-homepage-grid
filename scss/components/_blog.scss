@@ -1,0 +1,44 @@
+@use '../utils/' as *;
+
+.blog {
+    display: grid;
+    gap: 32px;
+
+    @media screen and (width >= 69.375em) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: span 3;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 120px auto;
+        grid-template-rows: repeat(3, auto);
+        gap: 12px 24px;
+    }
+
+    img {
+        grid-row: 1 / -1;
+    }
+
+    &__number {
+        font-size: 2rem;
+        color: $soft-red;
+    }
+
+    &__title {
+        color: $dark-blue;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.1;
+
+        &:hover {
+            transition-duration: 0.4s;
+            color: $soft-red;
+        }
+    }
+
+    p {
+        color: $gray-blue;
+        align-self: end;
+    }
+}

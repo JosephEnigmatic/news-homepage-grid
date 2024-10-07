@@ -1,0 +1,118 @@
+@use '../utils/' as *;
+
+.header {
+    padding-block: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    @media screen and (width >= 69.375em) {
+        padding-block: 80px 50px;
+    }
+
+    &__logo {
+        width: 45px;
+
+        @media screen and (width >= 69.375em) {
+            width: 65px;
+        }
+    }
+
+    &__navigation-main {
+        ul {
+            display: none;
+
+            @media screen and (width >= 69.375em) {
+                display: flex;
+                gap: 32px;
+            }
+        }
+
+        a {
+            color: $dark-blue;
+            font-size: 1.125rem;
+            font-size: 400;
+
+            &:hover {
+                transition-duration: 0.4s;
+                color: $soft-red;
+            }
+            
+            @media screen and (width >= 69.375em) {
+                color: $gray-blue;
+            }
+        }
+    }
+
+    // mobile menu
+    .navigation-button, &__navigation-mobile, .overlay {
+        @media screen and (width >= 69.375em) {
+            display: none;
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background-color: $dark-blue;
+        opacity: 0;
+        visibility: hidden;
+
+        &.open {
+            visibility: visible;
+            opacity: 0.5;
+            transition: opacity 300ms ease-in;
+        }
+
+        &.close {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 300ms ease-out;
+        }
+    }
+
+    &__navigation-mobile {
+        background-color: $off-white;
+        position: fixed;
+        left: 120px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 32px;
+        translate: 100vw 0;
+        
+        &.close {
+            translate: 100vw 0;
+            transition: translate 500ms ease-in-out;
+        }
+        
+        &.open {
+            translate: 0;
+            transition: translate 500ms ease-in-out;
+        }
+    
+        .navigation-button {
+            display: block;
+            margin-left: auto;
+            padding-bottom: 64px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            a {
+                color: $dark-blue;
+                font-size: 1.125rem;
+                font-size: 400;
+    
+                &:hover {
+                    transition-duration: 0.4s;
+                    color: $soft-red;
+                }
+            }
+        }
+    }
+}

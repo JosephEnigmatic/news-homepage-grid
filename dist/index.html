@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>FEM | News Homepage</title>
+    <script type="module" crossorigin src="/assets/index-CyPdcYDB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BZQYTGRu.css">
+  </head>
+  <body>
+    <header class="header wrapper">
+      <!-- logo -->
+      <a href="/index.html">
+        <img class="header__logo" src="./images/logo.svg" alt="Brand Logo" />
+      </a>
+
+      <!-- navigation links -->
+      <nav class="header__navigation-main">
+        <button class="navigation-button" id="open-btn">
+          <img src="./images/icon-menu.svg" alt="menu icon">
+        </button>
+
+        <!-- desktop -->
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+
+      <!-- overlay -->
+       <div class="overlay"></div>
+
+      <!-- mobile navigation -->
+       <nav class="header__navigation-mobile">
+        <button class="navigation-button" id="close-btn">
+          <img src="./images/icon-menu-close.svg" alt="icon-menu-close">
+        </button>
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+       </nav>
+    </header>
+
+    <main class="wrapper grid">
+      <!-- subgrid for features -->
+      <section class="feature">
+        <picture class="feature__image">
+          <source
+            media="(min-width: 868px)"
+            srcset="./images/image-web-3-desktop.jpg"
+          />
+          <img
+            src="./images/image-web-3-mobile.jpg"
+            alt="CLusters of shapes and colors for web 3"
+          />
+        </picture>
+
+        <h1 class="feature__headline">The Bright Future of Web 3.0?</h1>
+
+        <article class="feature__content">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <a href="#">Read More</a>
+        </article>
+      </section>
+
+      <!-- new -->
+      <section class="new">
+        <h2>New</h2>
+
+        <article class="new__post">
+          <h3><a href="#">Hydrogen V Electric Cars</a></h3>
+          <p>Will hydrogen fueled cars ever catch up to EVs?</p>
+        </article>
+        <article class="new__post">
+          <h3><a href="#">The Downside of AI Artistry</a></h3>
+          <p>
+            What are the possible adverse effects of on demand AI generated
+            image?
+          </p>
+        </article>
+        <article class="new__post">
+          <h3><a href="#">Is VC funding drying up?</a></h3>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </article>
+      </section>
+
+      <!-- blog post -->
+      <section class="blog">
+        <article>
+          <img src="./images/image-retro-pcs.jpg" alt="A retro PC" />
+          <h3 class="blog__number">01</h3>
+          <a href="#" class="blog__title">Reviving Retro PCs</a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </article>
+
+        <article>
+          <img src="./images/image-top-laptops.jpg" alt="A laptop keyboard" />
+          <h3 class="blog__number">02</h3>
+          <a href="#" class="blog__title">Top 10 Laptops of 2022</a>
+          <p>Our best picks for various needs and budgets.</p>
+        </article>
+
+        <article>
+          <img
+            src="./images/image-gaming-growth.jpg"
+            alt="A gaming pad in the air"
+          />
+          <h3 class="blog__number">03</h3>
+          <a href="#" class="blog__title">The Growth of Gaming</a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+img, picture, source {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+h1, h2 {
+    font-weight: 700;
+    line-height: 1;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    font: inherit;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 2.15rem + 1.5vw, 3.5rem);
+    font-weight: 700
+}
+
+h2 {
+    font-size: clamp(2rem, 1.8rem + 0.75vw, 2.5rem);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    padding-bottom: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+// util classes
+.wrapper {
+    width: min(1100px, calc(100% - 32px));
+    margin-inline: auto;
+}
+
+// main layout
+.grid {
+    display: grid;
+    gap: 64px;
+
+    @media screen and (width >= 69.375em) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px auto auto;
+        gap: 40px;
+    }
+}
